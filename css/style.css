@@ -62,11 +62,63 @@ h2{
 }
 @import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
 
+/*--------------------
+------LEFT-MENU-------
+---------------------*/
+
+.left-menu{
+	background-color: silver;
+	left: -240px;
+	height: 500px;
+	position: fixed;
+	width: 240px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
+	position: absolute;
+
+}
+.left-menu:hover{
+  left: 0px;
+}
+.left-menu .inner-header-buttons{
+  margin: 5px;
+}
+.left-menu-button{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #000ff2;
+  position: absolute;
+  right: -60px;
+  top: 80px;
+  display: block;
+  flex: none;
+
+
+
+}
+.left-menu-button i{
+	color: red;
+	position: relative;
+	top: 28%;
+	left: 28%;
+	font-size: 25px;
+
+}
+
+
 
 
 /*---------------
 ------MENU-------
 ------------------*/
+
+
+
 
 .menu{
 
@@ -84,7 +136,7 @@ h2{
 }
 .menu > ul li {
 	display: block;
-	background: ;
+	
 	padding: 25px 30px 24px 40px;
 	font-size: 18px;
 	color: #454547;
@@ -95,18 +147,14 @@ h2{
 	transition: all 0,3s ease; 
 
 }
-/*.menu > ul li:first-child{
-	border-left: 1px solid #b2b3b5;
-}
-.menu > ul li:last-child{
-	border-right: 1px solid #babbbb;
-}*/
 
 .logo{
 	height: 70px;
 	width: 90px;
-	margin-left: -600px;
-	position: absolute;
+}
+.menu ul li:first-child{
+	padding: 0px;
+	height: 30px;
 }
 .menu ul li a{
 color:#454547;
@@ -118,7 +166,7 @@ text-transform: uppercase;
 	transition: .3s all ease-in;
 }
 .menu ul{
-	background-image: url(../img/lofgo1.gif);
+	/*background-image: url(../img/lofgo1.gif);*/
 	background-color: #ececed;
 	width: 100%;
 	position: fixed;
@@ -130,6 +178,218 @@ text-transform: uppercase;
 .menu ul li:hover a{
 	color: white;
 }
+
+
+/*--------------------*/
+   /*HEADER BUTTONS*/
+/*--------------------*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Marvel');
+@font-face {
+    font-family: 'Coming_Soon'; /* Имя шрифта */
+    src:url('../fonts/Coming_Soon/ComingSoon-Regular.ttf') format('truetype');
+ }
+ @font-face {
+    font-family: 'coming_soonregular';
+    src: url('../fonts/comingsoon-regular-webfont.woff2') format('woff2'),
+         url('../fonts/comingsoon-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;}
+
+.header-buttons{
+	top: 105%;
+	left: 10%;
+	width: 70%;
+	height: 50px;
+	display: flex;
+	
+	margin: 100px auto;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.inner-header-buttons a{
+	color: white;
+	font-size: 15px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	padding: 15px;
+	text-transform: uppercase;
+	font-weight: 1;
+	
+
+}
+.inner-header-buttons{
+	border:2px solid #fff;
+	border-radius: 12px;
+	padding: 10px;
+}
+.inner-header-buttons:first-child{
+	animation-name: time;
+	animation-duration: 2s;
+	transition: .8s all ease-in;
+}
+.inner-header-buttons:nth-child(2){
+    animation-name: time;
+	animation-duration: 2.5s;
+	transition: .8s all ease-in;
+}
+.inner-header-buttons:nth-child(3){
+    animation-name: time;
+	animation-duration: 3s;
+	transition: .8s all ease-in;
+}
+.inner-header-buttons:nth-child(4){
+    animation-name: time;
+	animation-duration: 3.5s;
+	transition: .8s all ease-in;
+}
+
+
+@keyframes time{
+    from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+
+
+/*---------------
+--------ATOM-----
+---------------*/
+
+
+
+
+h5{
+	font-family:'Cuprum', sans-serif; 
+	font-size:60px;
+	color: #454547;
+	text-transform: uppercase;
+	border-bottom:2px solid #454547;
+	padding: 30px;
+	margin: 0 auto;
+	font-weight: 1;
+
+}
+.title-atom{
+	margin: 0px auto;
+	width: 300px;
+    height: auto;
+    text-align: center;
+
+}
+.outer-atom-container{
+	margin: 50px auto;
+	height: 100%;
+	
+}
+.atom-container{
+	width: 70%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0px auto;
+	background-color: pink;
+
+
+}
+.item .inner-foto{
+	width: 90%;
+}
+.inner-atom-container{
+	width: 50%;
+	height: 500px;
+	background-color: #999999;
+    
+    display: flex;
+    flex-direction: column;
+    
+    
+	
+}
+.inner-foto h3{
+	font-family: 'Amatic SC', cursive;
+	font-size: 40px;
+	text-align: left;
+	
+
+}
+.inner-atom-container .inner-foto{
+	width: 90%;
+	
+	
+	text-align: left;
+    
+    
+
+}
+.title-atom-facts{
+	font-family: 'Amatic SC', cursive;
+	font-size: 40px;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+.atom-curious h2{
+	font-family:'Cuprum', sans-serif; 
+	color: #454547;
+	font-size: 20px;
+}
+.atom-curious{
+	width: 70%;
+	margin: 50px auto;
+	text-align: center;
+}
+hr{
+	border:2px solid #2196F3;
+ 	text-align: center;
+ 	width: 20%;
+ 	margin: 0 auto;
+}
+.inner-atom-container:last-child{
+   
+}
+
+
+
+
+
 
 
 /*SECTION*/
@@ -183,14 +443,6 @@ text-transform: uppercase;
 
 
 
-/*slider*/
-
-
-
-
-
-
-/*slider 2*/
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);	
 
@@ -321,7 +573,20 @@ a.control_next {
 
 
 
-/*blue-section*/
+
+
+
+/*------------*/
+/*АДРОННИЙ КОЛАЙДЕР ФОТО*/
+/*--------------------*/
+
+
+
+
+
+
+
+
 .blue-container{
 	width: 100%;
 	display: flex;
@@ -361,6 +626,16 @@ a.control_next {
 	font-size: 20px;
 	padding: 20px;
 }
+
+
+
+
+
+
+/*--------------------*/
+/*FOOTER*/
+/*--------------------*/
+
 
 
 
@@ -545,81 +820,6 @@ color: #fff;
 }
 
 
-
-
-/*button {
-	background-color: white;
-	outline: none;	
-	margin: 5px;
-	border-radius: 50%;
-	position: relative;
-	top: 50%;
-}
-button i.fa{
- font-size: 30px;
- margin: 3px;
-margin-top: 10px;
-}
-button i{ 
- height: 40px;width: 40px;
- 
-}
-button:focus{
-	box-shadow: 3px 3px 30px -1px rgba(146,147,148,1);
-}
-
-button:hover{
-	box-shadow: 3px 3px 30px -1px rgba(146,147,148,1);
-}
-
-
-.facebook {
-	color: #3b5998;
-}
-
-.twitter {
-	color: #4099ff;
-}
-
-.google-plus {
-	color: #db5a3c;
-}
-
-.instagram {
-	color: #5c3d3e;
-}
-.github {
-	color: #4183c4;
-}
-
-.facebook:hover {
-	color: white;
-	background-color: #3b5998;
-	transform: scale(1.10);
-}
-
-.twitter:hover {
-	color: white;
-	background-color: #4099ff;
-	transform: scale(1.10);
-}
-
-.google-plus:hover {
-	color: white;
-	background-color: #db5a3c;
-	transform: scale(1.10);
-}
-
-.instagram:hover {
-	color: white;
-	background-color: #5c3d3e;
-	transform: scale(1.10);
-}
-.github:hover {
-	color: white;
-	background-color: #4183c4;
-	transform: scale(1.10);
-}*/
 
 
 /*NEWS CAROSEUL*/

@@ -32,8 +32,8 @@ function sliderRight() {
 
 
 /*Галарея "Науковці"*/
-
 jQuery(document).ready(function ($) {
+
 
   $('#checkbox').change(function(){
     setInterval(function () {
@@ -111,6 +111,15 @@ $backToTop.click(function () {
 
 
 
+//var flex = document.getElementsByClassName('flex-slider').style.display = "none";
 
+//jQuery(document).ready(function ($) {
+  
+  //$(".flex-slider").css("display","none");
+
+
+
+
+//});
 
 
